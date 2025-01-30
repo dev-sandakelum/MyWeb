@@ -1,11 +1,11 @@
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
-export default function About() {
+export default function About({colorCollection}) {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto">
-      <div className="md:flex">
-        <div className="md:flex-shrink-0">
+    <div className={`${colorCollection['1']} shadow-lg rounded overflow-hidden max-w-4xl mx-auto`}>
+      <div className="md:flex rounded">
+        <div className="md:flex-shrink-0 rounded overflow-hidden">
           <Image
             className="h-[200px] w-full md:h-full md:w-auto object-cover "
             src="/p.jpg"
