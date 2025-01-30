@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function Clock() {
+export default function Clock({}) {
   const [currentTime, setCurrentTime] = useState("");
   const [currentDate, setCurrentDate] = useState("");
   const [currentDay, setCurrentDay] = useState("");
@@ -23,9 +23,9 @@ export default function Clock() {
 
   return (
     <div className="flex justify-between px-2">
-      <h1>{currentDate} ,
-      {currentDay}</h1>
-      <h1>{currentTime}</h1>
+      <p>{currentDate} ,
+      {currentDay}</p>
+      <p>{currentTime}</p>
     </div>
   );
 }

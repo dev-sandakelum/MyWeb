@@ -13,6 +13,8 @@ const colorCollection = {
   '4': 'bg-red-500 text-white',
 
   'text0': '#535C91',
+  'time': 'text-gray-400',
+
   'icon0' : 'text-gray-400 hover:text-[#535C91]'
 }
 export const SocialIcon = ({ Icon, href }) => (

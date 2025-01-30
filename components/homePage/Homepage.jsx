@@ -9,7 +9,7 @@ export default function Homepage({ colorCollection }) {
       <div className={`px-[10px] w-full `}>
         <div className={`flex md:flex-row flex-col w-full gap-2`}>
           <div className={`w-full flex flex-col gap-2 md:w-1/2 `}>
-            <div className={`w-full border ${colorCollection["1"]} p-1`}>
+            <div className={`w-full border ${colorCollection["1"]} p-1 ${colorCollection["time"]}`}>
               <Time />
             </div>
             <MiniAbout colorCollection={colorCollection} />
