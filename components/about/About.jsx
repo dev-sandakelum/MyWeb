@@ -7,7 +7,7 @@ export default function About() {
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <Image
-            className="h-full w-auto object-cover md:w-48"
+            className="h-[200px] w-full md:h-full md:w-auto object-cover "
             src="/p.jpg"
             alt="Your Name"
             width={192}

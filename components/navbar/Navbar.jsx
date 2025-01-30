@@ -17,24 +17,28 @@ export default function Navbar({colorCollection}) {
   const goHome = () => {
     if (route != 1) {
       setRoute(1);
+      setIsOpen(false);
     }
   };
 
   const goAbout = () => {
     if (route != 2) {
       setRoute(2);
+      setIsOpen(false);
     }
   };
 
   const goProjects = () => {
     if (route != 3) {
       setRoute(3);
+      setIsOpen(false);
     }
   };
 
   const goContact = () => {
     if (route != 4) {
       setRoute(4);
+      setIsOpen(false);
     }
   };
 
