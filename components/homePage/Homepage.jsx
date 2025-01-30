@@ -2,8 +2,6 @@ import React from "react";
 import Time from "./date&time/Time";
 import MiniAbout from "./miniAboutCard/MiniAbout";
 import TopProjects from "./topProjects/TopProjects";
-import Project from "../projects/project/project";
-import { Button } from "../ui/button";
 
 export default function Homepage({ colorCollection, setRoute }) {
   return (
