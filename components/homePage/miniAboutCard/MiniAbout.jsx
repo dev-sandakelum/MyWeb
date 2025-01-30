@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 export default function MiniAbout({colorCollection}) {
   return (
     <div
-      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start flex-row gap-[20px] md:w-1/2 w-full`}
+      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-center flex-row gap-[20px] w-full h-[150px]`}
     >
       <div
         className={`rounded-full w-[100px] h-[100px] shadow-xl overflow-hidden border`}

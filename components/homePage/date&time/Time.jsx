@@ -16,5 +16,5 @@ export default function Clock() {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
-  return <h3>{currentTime}</h3>;
+  return <h3 className="">{currentTime}</h3>;
 }

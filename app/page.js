@@ -12,14 +12,15 @@ const colorCollection = {
   '3': 'bg-yellow-500 text-white',
   '4': 'bg-red-500 text-white',
 
-  'text0': '#535C91'
+  'text0': '#535C91',
+  'icon0' : 'text-gray-400 hover:text-[#535C91]'
 }
 export const SocialIcon = ({ Icon, href }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className={`text-gray-400 hover:text-[#535C91] socialIcon`}
+    className={`${colorCollection['icon0']} socialIcon`}
   >
     <Icon className="h-5 w-5" />
   </a>
