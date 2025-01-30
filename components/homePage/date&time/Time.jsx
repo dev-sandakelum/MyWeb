@@ -4,17 +4,28 @@ import { useState, useEffect } from "react";
 
 export default function Clock() {
   const [currentTime, setCurrentTime] = useState("");
+  const [currentDate, setCurrentDate] = useState("");
+  const [currentDay, setCurrentDay] = useState("");
 
   useEffect(() => {
     const updateClock = () => {
-      setCurrentTime(new Date().toLocaleTimeString());
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString());
+      setCurrentDate(now.toLocaleDateString());
+      setCurrentDay(now.toLocaleDateString(undefined, { weekday: 'long' }));
     };
 
-    updateClock(); // Set initial time
+    updateClock(); // Set initial time and date
     const interval = setInterval(updateClock, 1000); // Update every second
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
-  return <h3 className="">{currentTime}</h3>;
+  return (
+    <div className="flex justify-between px-2">
+      <h1>{currentDate} ,
+      {currentDay}</h1>
+      <h1>{currentTime}</h1>
+    </div>
+  );
 }

@@ -16,7 +16,7 @@ const ProjectMiniCard = ({text ,colorCollection}) => {
 export default function TopProjects({ colorCollection }) {
   return (
     <div
-      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-start flex-col  w-full h-[250px]`}
+      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-start flex-col  w-full md:h-[250px] h-auto`}
     >
       <h1>Recent Projects</h1>
       <div className="mx-2 grid grid-cols-2 gap-2 w-full h-auto pr-2">
