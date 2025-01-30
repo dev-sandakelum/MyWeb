@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <Image
+          src="/Frame-a2.png"
+          alt="Desktop3"
+          width={1000}
+          height={1000}
+          className="w-full h-full object-cover p-0 m-0 -z-10 absolute"
+        /> */}
+        
         {children}
       </body>
     </html>
