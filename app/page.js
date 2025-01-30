@@ -31,21 +31,23 @@ export const SocialIcon = ({ Icon, href }) => (
 
 export default function Home() {
   
+  
   const [route, setRoute] = useState(1);
   return (
     <div className="min-h-screen bg-gray-100">
-      <Navbar route={route} useRoute={setRoute}  colorCollection={colorCollection}/>
+      <Navbar route={route} setRoute={setRoute}  colorCollection={colorCollection}/>
     </div>
   )
 }
 
-export function HomeRoute({route}) {
+export function HomeRoute({route ,setRoute}) {
   return (
     <div className="min-h-screen bg-gray-100 py-20 block overflow-hidden">
-      {route == 1 && <Homepage colorCollection={colorCollection}/>}
+      {route == 1 && <Homepage colorCollection={colorCollection} setRoute={setRoute}/>}
       {route == 2 && <About/>}
       {route == 3 && <Projects/>}
       {route == 4 && <Contact/>}
+      
       
     </div>
   )

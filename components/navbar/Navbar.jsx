@@ -10,9 +10,8 @@ import "./navbar.css";
 
 
 
-export default function Navbar({colorCollection}) {
+export default function Navbar({colorCollection ,route ,setRoute}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [route, setRoute] = useState(1);
 
   const goHome = () => {
     if (route != 1) {
@@ -160,7 +159,7 @@ export default function Navbar({colorCollection}) {
           </div>
         </div>
       </nav>
-      <HomeRoute route={route} />
+      <HomeRoute route={route} setRoute={setRoute} />
     </>
   );
 }
