@@ -3,29 +3,26 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-
-
-export default function MiniAbout({ colorCollection ,setRoute }) {
-
+export default function MiniAbout({ colorCollection, setRoute }) {
   const handleClick = () => {
     setRoute(2);
   };
   return (
     <div
-      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-center flex-row gap-[20px] w-full h-[150px]`}
+      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-center flex-row gap-[20px] w-full h-auto md:h-[150px]`}
     >
       <div
         className={`rounded-full w-[100px] h-[100px] min-w-[100px] shadow-xl overflow-hidden border`}
       >
         <img src="/p.jpg" alt="" />
       </div>
-      <div className={`py-2 flex flex-col justify-between h-full`}>
+      <div className={`py-2 flex flex-col justify-between h-full overflow-hidden`}>
         <h2 className="">Hasitha Sandakelum</h2>
         <p className={` font-thin`}>
           Tech enthusiast building magical web experiences with Next.js,
           Three.js, and NativeScript.
         </p>
-        <div className="flex flex-row gap-2">
+        <div className="md:flex flex-row gap-2 hidden ">
           <div
             className={`w-[40px] h-[30px] rounded border flex justify-center items-center`}
           >
@@ -55,10 +52,18 @@ export default function MiniAbout({ colorCollection ,setRoute }) {
             className={`w-auto h-[30px] rounded border flex justify-center items-center`}
             onClick={() => setRoute(2)}
           >
-            <Button className={ `shadow-none`} >
-                <p className={`${colorCollection["icon0"]}`}>about more {`>>`}</p>
+            <Button className={`shadow-none`}>
+              <p className={`${colorCollection["icon0"]}`}>about more {`>>`}</p>
             </Button>
           </div>
+        </div>
+        <div
+          className={`w-auto h-[30px] rounded border flex justify-center items-center md:hidden`}
+          onClick={() => setRoute(2)}
+        >
+          <Button className={`shadow-none`}>
+            <p className={`${colorCollection["icon0"]}`}>about more {`>>`}</p>
+          </Button>
         </div>
       </div>
     </div>
