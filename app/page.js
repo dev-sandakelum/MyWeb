@@ -1,6 +1,7 @@
 "use client";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
+import { Project_list } from "@/components/db/DB";
 import Homepage from "@/components/homePage/Homepage";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/projects/Projects";
@@ -17,6 +18,7 @@ const colorCollection = {
 
   icon0: "text-gray-400 hover:text-[#535C91]",
 };
+
 export const SocialIcon = ({ Icon, href }) => (
   <a
     href={href}
@@ -45,10 +47,19 @@ export function HomeRoute({ route, setRoute }) {
   return (
     <div className="min-h-screen bg-gray-100 py-20 block overflow-hidden">
       {route == 1 && (
-        <Homepage colorCollection={colorCollection} setRoute={setRoute} />
+        <Homepage
+          colorCollection={colorCollection}
+          setRoute={setRoute}
+          Project_list={Project_list}
+        />
       )}
       {route == 2 && <About colorCollection={colorCollection} />}
-      {route == 3 && <Projects colorCollection={colorCollection}/>}
+      {route == 3 && (
+        <Projects
+          colorCollection={colorCollection}
+          Project_list={Project_list}
+        />
+      )}
       {route == 4 && <Contact />}
     </div>
   );

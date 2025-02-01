@@ -3,7 +3,7 @@ import Time from "./date&time/Time";
 import MiniAbout from "./miniAboutCard/MiniAbout";
 import TopProjects from "./topProjects/TopProjects";
 
-export default function Homepage({ colorCollection, setRoute }) {
+export default function Homepage({ colorCollection, setRoute , Project_list }) {
   return (
     <div>
       <div className={`px-[10px] w-full `}>
@@ -17,7 +17,7 @@ export default function Homepage({ colorCollection, setRoute }) {
             <MiniAbout colorCollection={colorCollection} setRoute={setRoute} />
           </div>
           <div className="w-full flex flex-col gap-2 md:w-1/2 ">
-            <TopProjects colorCollection={colorCollection} />
+            <TopProjects colorCollection={colorCollection} Project_list={Project_list} />
             
           </div>
         </div>
