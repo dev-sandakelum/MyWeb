@@ -6,6 +6,7 @@ export default function ChatAi() {
   const [Output, setOutput] = useState("");
   const [waiting, setWaiting] = useState(false);
 
+  let chat = [];
   async function Ai({ _prompt }) {
     setText("");
     setWaiting(true);
@@ -20,7 +21,8 @@ export default function ChatAi() {
 
     const result = await model.generateContent(text);
 
-    let formattedResponse = result.response.text()
+    let formattedResponse = result.response
+      .text()
       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold text
       .replace(/\*(.*?)\*/g, "<em>$1</em>") // Italic text
       .replace(/```(.*?)```/gs, "<pre><code>$1</code></pre>") // Code blocks
@@ -36,9 +38,9 @@ export default function ChatAi() {
   return (
     <div className="flex w-full h-screen p-3 border items-center justify-center min-h-full">
       {/* <Ai /> */}
-      <div className="max-w-[700px] border w-full max-h-min min-h-min flex flex-col-reverse">
-        <div className="w-full h-full border overflow-scroll p-2">
-          <p dangerouslySetInnerHTML={{__html:Output}}></p>
+      <div className="max-w-[700px] border w-full h-full flex flex-col-reverse">
+        <div className="w-full h-full border overflow-scroll p-2 flex flex-col">
+          <p dangerouslySetInnerHTML={{ __html: Output }}></p>
           {waiting && <div>Loading...</div>}
         </div>
         <div className=" w-full h-auto  px-2 ">
@@ -48,7 +50,6 @@ export default function ChatAi() {
               type="text"
               className="border w-full border-none focus:outline-none"
               placeholder="Ask anything"
-              
               onChange={(e) => setText(e.target.value)}
             />
             <input
