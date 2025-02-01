@@ -18,11 +18,11 @@ export default function MiniAbout({ colorCollection, setRoute }) {
       </div>
       <div className={`py-2 flex flex-col justify-between h-full overflow-hidden`}>
         <h2 className="font-bold">Hasitha Sandakelum</h2>
-        <p className={`${colorCollection["icon0"]} `}>
+        <p className={`${colorCollection["icon0"]} hidden md:block` }>
           Tech enthusiast building magical web experiences with Next.js,
           Three.js, and NativeScript.
         </p>
-        <div className="md:flex flex-row gap-2 hidden ">
+        <div className="flex flex-row gap-2  md:mb-0 mb-1">
           <div
             className={`w-[40px] h-[30px] rounded border flex justify-center items-center`}
           >
@@ -49,19 +49,19 @@ export default function MiniAbout({ colorCollection, setRoute }) {
             />
           </div>
           <div
-            className={`w-auto h-[30px] rounded border flex justify-center items-center`}
+            className={`w-auto h-[30px] rounded border md:flex justify-center items-center hidden `}
             onClick={() => setRoute(2)}
           >
-            <Button className={`shadow-none`}>
-              <p className={`${colorCollection["icon0"]}`}>about more {`>>`}</p>
+            <Button className={`shadow-none `}>
+              <p className={`${colorCollection["icon0"]} `}>about more {`>>`}</p>
             </Button>
           </div>
         </div>
         <div
-          className={`w-auto h-[30px] rounded border flex justify-center items-center md:hidden`}
+          className={`w-auto h-[30px] rounded border flex justify-center items-center md:hidden pt-1`}
           onClick={() => setRoute(2)}
         >
-          <Button className={`shadow-none`}>
+          <Button className={`shadow-none `}>
             <p className={`${colorCollection["icon0"]}`}>about more {`>>`}</p>
           </Button>
         </div>
