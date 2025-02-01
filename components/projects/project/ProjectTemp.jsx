@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function ProjectTemp({ colorCollection , p_title ,p_description}) {
+  const link = '/preview/' + p_title;
   return (
     <div
       className={`w-full h-[100px] ${colorCollection["1"]} border shadow p-2 px-4`}
@@ -19,7 +20,7 @@ export default function ProjectTemp({ colorCollection , p_title ,p_description})
         <Button
           className={`shadow-none w-auto h-[30px] rounded border flex justify-center items-center `}
         >
-          <Link href={"/preview/1"}>
+          <Link href={link}>
             <p>try {">>"}</p>
           </Link>
         </Button>
