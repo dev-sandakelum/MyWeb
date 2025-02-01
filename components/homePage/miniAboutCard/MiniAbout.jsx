@@ -17,8 +17,8 @@ export default function MiniAbout({ colorCollection, setRoute }) {
         <img src="/p.jpg" alt="" />
       </div>
       <div className={`py-2 flex flex-col justify-between h-full overflow-hidden`}>
-        <h2 className="">Hasitha Sandakelum</h2>
-        <p className={` font-thin`}>
+        <h2 className="font-bold">Hasitha Sandakelum</h2>
+        <p className={` text-gray-800`}>
           Tech enthusiast building magical web experiences with Next.js,
           Three.js, and NativeScript.
         </p>
