@@ -1,3 +1,3 @@
 export const Project_list = [
-    {p_title : "Chat-app" , p_description : "" , setTop: true },
+    {p_title : "Chat-bot" , p_description : "JS , google-API" , setTop: true },
   ];

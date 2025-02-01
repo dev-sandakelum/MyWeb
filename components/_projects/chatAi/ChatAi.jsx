@@ -4,8 +4,11 @@ import { useState } from "react";
 export default function ChatAi() {
   const [text, setText] = useState("");
   const [Output, setOutput] = useState("");
+  const [waiting, setWaiting] = useState(false);
 
   async function Ai({ _prompt }) {
+    setText("");
+    setWaiting(true);
     const { GoogleGenerativeAI } = require("@google/generative-ai");
 
     const genAI = new GoogleGenerativeAI(
@@ -26,6 +29,7 @@ export default function ChatAi() {
     // console.log(result.response.text());
     //   return result.response.text();
     // setOutput(result.response.text());
+    setWaiting(false);
     setOutput(formattedResponse);
   }
 
@@ -35,6 +39,7 @@ export default function ChatAi() {
       <div className="max-w-[700px] border w-full h-full flex flex-col-reverse">
         <div className="w-full h-full border overflow-scroll p-2">
           <p dangerouslySetInnerHTML={{__html:Output}}></p>
+          {waiting && <div>Loading...</div>}
         </div>
         <div className=" w-full h-auto  px-2 ">
           {/* input */}
