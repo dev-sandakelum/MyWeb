@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "./metaData";
 
 const geistSans = Geist({
@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = Metadata;
 
+export const viewport = {
+  themeColor: "#000000",
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -28,9 +31,9 @@ export default function RootLayout({ children }) {
           height={1000}
           className="w-full h-full object-cover p-0 m-0 -z-10 absolute"
         /> */}
-        
+
         {children}
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );

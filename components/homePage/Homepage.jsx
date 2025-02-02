@@ -17,7 +17,7 @@ export default function Homepage({ colorCollection, setRoute , Project_list }) {
             <MiniAbout colorCollection={colorCollection} setRoute={setRoute} />
           </div>
           <div className="w-full flex flex-col gap-2 md:w-1/2 ">
-            <TopProjects colorCollection={colorCollection} Project_list={Project_list} />
+            <TopProjects colorCollection={colorCollection} Project_list={Project_list} setRoute={setRoute}/>
             
           </div>
         </div>

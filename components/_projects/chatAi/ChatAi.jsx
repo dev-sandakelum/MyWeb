@@ -39,7 +39,7 @@ export default function ChatAi() {
     <div className="flex w-full h-screen p-3 border items-center justify-center min-h-full">
       {/* <Ai /> */}
       <div className="max-w-[700px] border w-full h-full flex flex-col-reverse">
-        <div className="w-full h-full border overflow-scroll p-2 flex flex-col">
+        <div className="w-full h-full border overflow-scroll scroll-smooth p-2 flex flex-col">
           <p dangerouslySetInnerHTML={{ __html: Output }}></p>
           {waiting && <div>Loading...</div>}
         </div>
