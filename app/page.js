@@ -33,7 +33,7 @@ export const SocialIcon = ({ Icon, href }) => (
 export default function Home() {
   const [route, setRoute] = useState(1);
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen h-[100svh] bg-[#FAFAFF]">
       <Navbar
         route={route}
         setRoute={setRoute}
@@ -45,7 +45,7 @@ export default function Home() {
 
 export function HomeRoute({ route, setRoute }) {
   return (
-    <div className="min-h-screen bg-gray-100 py-20 block overflow-hidden">
+    <div className="md:min-h-screen h-[100%] overflow-y-scroll scroll-smooth py-20 block overflow-x-hidden">
       {route == 1 && (
         <Homepage
           colorCollection={colorCollection}

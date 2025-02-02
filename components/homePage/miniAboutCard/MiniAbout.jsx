@@ -9,7 +9,7 @@ export default function MiniAbout({ colorCollection, setRoute }) {
   };
   return (
     <div
-      className={`${colorCollection["1"]} shadow rounded p-[10px] flex justify-start items-center flex-row gap-[20px] w-full h-auto md:h-[150px]`}
+      className={`${colorCollection["1"]} border shadow rounded p-[10px] flex justify-start items-center flex-row gap-[20px] w-full h-auto md:h-[150px]`}
     >
       <div
         className={`rounded-full w-[100px] h-[100px] min-w-[100px] shadow-xl overflow-hidden border`}
