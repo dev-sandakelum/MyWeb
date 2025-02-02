@@ -33,34 +33,29 @@ export const SocialIcon = ({ Icon, href }) => (
 export default function Home() {
   const [route, setRoute] = useState(1);
   return (
-    <div className=" h-[100%] bg-[#d6d6fa70] overflow-y-scroll scroll-smoot">
+    <div className=" max-h-[100svh] md:h-full bg-[#d6d6fa70] overflow-y-hidden ">
       <Navbar
         route={route}
         setRoute={setRoute}
         colorCollection={colorCollection}
       />
-    </div>
-  );
-}
-
-export function HomeRoute({ route, setRoute }) {
-  return (
-    <div className="md:min-h-screen h-autoh my-20 pb-20 block overflow-x-hidden">
-      {route == 1 && (
-        <Homepage
-          colorCollection={colorCollection}
-          setRoute={setRoute}
-          Project_list={Project_list}
-        />
-      )}
-      {route == 2 && <About colorCollection={colorCollection} />}
-      {route == 3 && (
-        <Projects
-          colorCollection={colorCollection}
-          Project_list={Project_list}
-        />
-      )}
-      {route == 4 && <Contact />}
+      <div className="md:min-h-screen h-[100svh] block overflow-x-hidden overflow-y-scroll scroll-smooth pt-[70px] pb-[10px]">
+        {route == 1 && (
+          <Homepage
+            colorCollection={colorCollection}
+            setRoute={setRoute}
+            Project_list={Project_list}
+          />
+        )}
+        {route == 2 && <About colorCollection={colorCollection} />}
+        {route == 3 && (
+          <Projects
+            colorCollection={colorCollection}
+            Project_list={Project_list}
+          />
+        )}
+        {route == 4 && <Contact />}
+      </div>
     </div>
   );
 }

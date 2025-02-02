@@ -159,7 +159,6 @@ export default function Navbar({colorCollection ,route ,setRoute}) {
           </div>
         </div>
       </nav>
-      <HomeRoute route={route} setRoute={setRoute} />
     </>
   );
 }
